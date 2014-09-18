@@ -1,0 +1,18 @@
+function watershed_debug(path)
+%frame(row) * feature(column)
+
+
+I = dotplot(N,N);
+Idist{1}=I;
+
+for i =1:iter-1
+    Idist{i+1} = im2bw(Idist{i},graythresh(Idist{i}));
+    Idist{i+1} = bwdist(~Idist{i+1});
+    Idist{i+1} = Idist{i+1}./max(max(Idist{i+1}));
+
+end
+%imshow(Idist{1})
+Iwater = watershed(1-Idist{iter});
+Isub = find(diag(Iwater)==0);
+Ncut = [1;Isub;length(Iwater)];
+Nc = length(Ncut);
