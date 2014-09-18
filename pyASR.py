@@ -6,7 +6,7 @@ import shutil
 import time
 import wave
 import struct
-from ult_root import *
+#from ult_root import *
 #import evaluation
 
 class SYS:
@@ -178,7 +178,6 @@ class ASR:
     def setname(self):
         self.X['corpus_dir'] = self.corpus
         self.X['featur_dir'] = self.X['corpus_dir'][:-1] + '_MFCC/'
-        self.X['matlab_dir'] = ult_root+'matlab/'
         
         self.X['markov_dir'] = self.target + 'hmm/'
         self.X['answer_dir'] = self.target + 'answer/'

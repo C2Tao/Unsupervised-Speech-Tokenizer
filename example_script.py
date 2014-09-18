@@ -1,6 +1,5 @@
 import sys
 import shelve
-sys.path.append('/home/c2tao/Dropbox/ULT_v0.3/')
 import pyASR
 import pySFX
 import pyEXT
